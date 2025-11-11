@@ -396,3 +396,15 @@ header, main, .feature-card, .btn-sesion, .carrito-btn, select, input { position
 .page:not(.active) { display: none !important; pointer-events: none; opacity: 0; }
 .subpage { display: none; }
 .subpage.active { display: block; }
+
+/* 🔒 Evita edición o selección de texto en las tarjetas de productos */
+.card-producto, 
+.card-producto * {
+  user-select: none;      /* No se puede seleccionar texto */
+  pointer-events: auto;   /* Mantiene el clic del botón activo */
+}
+
+.card-producto h4,
+.card-producto p {
+  cursor: default;        /* Cursor normal, no de texto */
+}
